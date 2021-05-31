@@ -1,0 +1,164 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: sans-serif;
+    font-size: 14px;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    background: rgb(243, 243, 243);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.Capa-Instagram {
+    display: flex;
+    /* coloca os elementos em linha */
+    align-items: center;
+    /* faze o linhamento vertical (eixo y) dos elementos */
+    justify-content: start;
+    /* faze o linhamento horizotal (eixo x) dos elementos */
+    width: 60%;
+    height: 100vh;
+}
+
+.coluna1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+}
+
+.coluna1 img {
+    height: 50rem;
+}
+
+.coluna2 {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    /* Alinha os elementos */
+    width: 50%;
+    min-height: 34rem;
+}
+
+.grupo1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    background-color: #ffffff;
+    width: 100%;
+    padding: 1.3rem 0;
+    border: 1px solid lightgray;
+}
+
+
+/* O "nth-child()" Seleciona o filhos conforme o numero que estão entre parenteses */
+
+.grupo1:nth-child(1) {
+    min-height: 19rem;
+}
+
+.Logo_Instagram {
+    height: 3rem;
+}
+
+.foto-pefil {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    overflow: hidden;
+    /*para a imagem não ultrapaça o DIV*/
+}
+
+.foto-pefil img {
+    height: 6rem;
+}
+
+.Login {
+    background-color: #0095f6;
+    color: #ffffff;
+    padding: 8px;
+    border-radius: 4px;
+}
+
+.Logout {
+    color: #0095f6;
+    margin-top: 1rem;
+}
+
+.nao-Conta {
+    color: rgb(160, 160, 160);
+}
+
+.Link-azul {
+    color: #0095f6;
+}
+
+.obter-o-app {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 1.3rem 0;
+}
+
+.download {
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 1rem;
+}
+
+.app-download {
+    height: 3rem;
+    width: 10rem;
+    /*olha o que significa*/
+    background-size: cover;
+}
+
+.app-download:nth-child(1) {
+    background-image: url(Imagens/apple-button.png);
+}
+
+.app-download:nth-child(2) {
+    background-image: url(Imagens/googleplay-button.png);
+}
+
+
+/* Tela respanciva */
+
+@media(max-wigth:1024px) {
+    .Capa-Instagram {
+        width: 90%;
+    }
+}
+
+@media(max-wigth:650px) {
+    body {
+        background-color: #ffffff;
+    }
+    .Capa-Instagram {
+        width: 90%;
+    }
+    .coluna1 {
+        display: none;
+    }
+    .coluna2 {
+        width: 100%;
+    }
+    .grupo1 {
+        border: 1px solid transparent;
+    }
+}
